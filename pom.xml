@@ -1147,14 +1147,14 @@
 
 	<distributionManagement>
 		<repository>
-			<id>openmrs-repo-releases</id>
+			<id>nexus</id>
 			<name>OpenMRS Nexus Releases</name>
-			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/releases</url>
+			<url>http://35.182.183.173:8081/repository/liontech-openmrs</url>
 		</repository>
 		<snapshotRepository>
-			<id>openmrs-repo-snapshots</id>
+			<id>nexus</id>
 			<name>OpenMRS Nexus Snapshots</name>
-			<url>https://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
+			<url>http://35.182.183.173:8081/repository/liontech-openmrs-snapshot</url>
 		</snapshotRepository>
 	</distributionManagement>
 
