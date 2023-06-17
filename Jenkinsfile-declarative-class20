@@ -10,7 +10,7 @@ pipeline{
         stage('clonefromsourcecode'){
             steps{
                 sh "echo 'clone latest code from github'"
-                sh "echo 'build  developing for dev environment '"
+                sh "echo 'build  developing for dev environment for june17'"
                 git 'https://github.com/Lion-Technology-Solutions/liontech-emr-health-app.git'
             }
         }
