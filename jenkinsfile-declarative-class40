@@ -1,0 +1,22 @@
+pipeline{  
+
+agent any
+tools
+
+  maven "maven3.9.2"
+}
+
+stages{
+
+}
+   stages('clonefromsourcecode'){
+         steps{
+              sh "echo 'clone latest code from github"
+            sh "echo 'build developing for dev environment"
+         git 'https://github.com/seun38/liontech-emr-health-app-1.git'
+   }
+   stage('Test+build+package'){
+
+   }
+}
+
