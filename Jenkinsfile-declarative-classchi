@@ -1,4 +1,5 @@
 pipeline{
+
     agent any
     tools {
         maven "maven3.9.2"
@@ -12,12 +13,15 @@ pipeline{
             }
         }
         stage('test+build+package'){
-            sh "echo 'running sonarqube code quality analysis'"
-            sh "echo 'class20 devops engineer pipeline'"
-            sh "mvn install"
-            sh "mvn validate"
-            sh "mvn test"
-            sh "mvn clean package"
+            steps{
+                sh "echo 'running sonarqube code quality analysis'"
+                sh "echo 'class20 devops engineer pipeline'"
+                sh "mvn install"
+                sh "mvn validate"
+                sh "mvn test"
+                sh "mvn clean package"
+            }
+           
         }
         stage('Codequality'){
             steps{
