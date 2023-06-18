@@ -26,7 +26,7 @@ pipeline{
         stage('Codequality'){
             steps{
                 sh "echo 'performing code quality analysis'"
-                sh "echo 'adding more stuff for commit'"
+                sh "echo 'adding more stuffs'"
                 sh "mvn sonar:sonar"
             }
         }
