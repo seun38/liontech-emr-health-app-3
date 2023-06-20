@@ -13,7 +13,7 @@ pipeline{
             steps{
                 sh "echo 'clone latest code from github'"
                 sh "echo 'build  developing for dev environment for june17'"
-                git git 'https://github.com/Lion-Technology-Solutions/liontech-emr-health-app.git'
+                git 'https://github.com/Lion-Technology-Solutions/liontech-emr-health-app.git'
             }
         }
 
