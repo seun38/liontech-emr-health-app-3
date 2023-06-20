@@ -1,0 +1,48 @@
+pipeline{
+
+    agent {
+    	label 'slave1'
+    }
+    tools {
+
+        maven "maven3.9.2"
+    }
+
+    stages {
+        stage('clonefromsourcecode'){
+            steps{
+                sh "echo 'clone latest code from github'"
+                sh "echo 'build  developing for dev environment for june17'"
+                git git 'https://github.com/Lion-Technology-Solutions/liontech-emr-health-app.git'
+            }
+        }
+
+        stage('Test+build+package'){
+            steps{
+
+                sh "echo 'running sonarqube code quality analysis'"
+                sh "echo 'class20 devops engineers develop pipelines'"
+                sh "echo 'testing must passoed inorder to pacjage application'"
+                sh  "mvn install"
+                sh  "mvn validate"
+                sh   "mvn test"
+                sh   "mvn clean package"
+            }
+        }
+        stage('codequality'){
+            steps{
+                sh  "echo 'performing codequality analysis'"
+                sh   "mvn sonar:sonar"
+            }
+        }
+
+        stage('upload2nexus'){
+            steps{
+                sh  "mvn deploy"
+            }
+        }
+
+
+    }
+
+}

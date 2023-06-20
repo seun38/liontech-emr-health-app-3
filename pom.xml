@@ -1099,9 +1099,9 @@
 			<id>sonar-cloud</id>
 			<properties>
 				<sonar.organization>openmrs</sonar.organization>
-				<sonar.host.url>http://54.184.189.29:9000/</sonar.host.url>
-		        <sonar.login>admin</sonar.login>  
-		        <sonar.login>fcbc4d3e948876d8cec4b06848cc3348d5c290db</sonar.login>
+				<sonar.host.url>http://54.86.162.223:9000/</sonar.host.url>
+		        <sonar.login>linux</sonar.login>  
+		        <sonar.login>b3d6c814b10610106baf43227c6d3fffde6874e6</sonar.login>
 			</properties>
 		</profile>
 	</profiles>
@@ -1151,12 +1151,12 @@
 		<repository>
 			<id>nexus</id>
 			<name>OpenMRS Nexus Releases</name>
-			<url>http://35.182.183.173:8081/repository/liontech-openmrs</url>
+			<url>http://34.203.34.19:8081/repository/june17-release/</url>
 		</repository>
 		<snapshotRepository>
 			<id>nexus</id>
 			<name>OpenMRS Nexus Snapshots</name>
-			<url>http://35.182.183.173:8081/repository/liontech-openmrs-snapshot</url>
+			<url>http://34.203.34.19:8081/repository/june17-snapshot/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
