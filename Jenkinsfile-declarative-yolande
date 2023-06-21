@@ -1,6 +1,6 @@
 pipeline{
 
-       agent slave1
+       agent any
        tools{
 
             maven "maven3.9.2"
@@ -23,6 +23,7 @@ pipeline{
                 sh "mvn install"
                 sh "mvn validate"
                 sh "mvn test"
+                sh "mvn verify"
                 sh "mvn clean package"
 
             }
